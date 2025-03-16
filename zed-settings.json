@@ -11,10 +11,10 @@
   "vim_mode": false,
   "use_autoclose": false,
   "relative_line_numbers": true,
-  "ui_font_size": 16,
+  "ui_font_size": 18,
   "buffer_font_size": 16,
-  "ui_font_family": "Hack Nerd Font",
-  "buffer_font_family": "Hack Nerd Font",
+  "ui_font_family": "FantasqueSansM Nerd Font",
+  "buffer_font_family": "Cousine Nerd Font",
   "show_completions_on_input": true,
   "show_completion_documentation": true,
   "diagnostics": {
@@ -30,7 +30,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine Moon"
+    "dark": "Tokyo Night Storm"
   },
   "languages": {
     "Rust": {
@@ -40,7 +40,7 @@
       "language_servers": ["rust-analyzer"],
       "indent_guides": {
         "enabled": true,
-        "coloring": "indent_aware"
+        "coloring": "fixed"
       }
     },
     "Go": {
@@ -59,7 +59,7 @@
       "language_servers": ["tsls"],
       "indent_guides": {
         "enabled": true,
-        "coloring": "indent_aware"
+        "coloring": "fixed"
       }
     },
     "JavaScript": {
@@ -105,5 +105,18 @@
     "entry_spacing": "comfortable",
     "default_width": 320,
     "indent_size": 30
+  },
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "font_style": "italic"
+      },
+      "object": {
+        "font_style": "italic"
+      },
+      "function": {
+        "font_style": "italic"
+      }
+    }
   }
 }
