@@ -8,7 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "icon_theme": "Material Icon Theme",
-  "vim_mode": true,
+  "vim_mode": false,
+  "use_autoclose": false,
+  "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "ui_font_family": "Hack Nerd Font",
@@ -35,21 +37,73 @@
       "format_on_save": "on",
       "show_completions_on_input": true,
       "show_completion_documentation": true,
-      "language_servers": ["rust-analyzer"]
+      "language_servers": ["rust-analyzer"],
+      "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+      }
     },
     "Go": {
       "show_completion_documentation": true,
       "show_completions_on_input": true,
-      "language_servers": ["gopls"]
+      "language_servers": ["gopls"],
+      "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+      }
     },
     "TypeScript": {
       "show_completion_documentation": true,
       "show_completions_on_input": true,
       "show_edit_predictions": true,
-      "language_servers": ["tsls"]
+      "language_servers": ["tsls"],
+      "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware"
+      }
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "show_completion_documentation": true,
+      "show_completions_on_input": true,
+      "show_edit_predictions": true,
+      "formatter": {
+        "external": {
+          "command": "biome",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
     }
   },
   "tab_bar": {
     "show": false
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "go": true,
+    "rust": true,
+    "typescript": true,
+    "dockerfile": true,
+    "docker-compose": true
+  },
+  "autosave": "on_focus_change",
+  "cursor_blink": true,
+  "cursor_shape": "bar",
+  "git": {
+    "git_gutter": null,
+    "gutter_debounce": null,
+    "inline_blame": null,
+    "git_diff": false
+  },
+  "file_scan_exclusions": [".env*"],
+  "project_panel": {
+    "dock": "left",
+    "entry_spacing": "comfortable",
+    "default_width": 320,
+    "indent_size": 30
   }
 }
