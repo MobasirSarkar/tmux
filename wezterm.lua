@@ -3,15 +3,15 @@ local config = wezterm.config_builder()
 
 -- Theme settings
 local THEME = {
-	color_scheme = "Tokyo Night",
-	background_color = "#232136",
+	color_scheme = "JWR dark (terminal.sexy)",
+	background_color = "#000111",
 	visual_bell_color = "#200000",
 	opacity = 0.9,
 }
 
 -- Font settings
 local FONT = {
-	family = "Hack Nerd Font",
+	family = "GeistMono Nerd Font",
 	size = 15,
 }
 
@@ -47,8 +47,8 @@ local WINDOW = {
 -- Background settings
 local BACKGROUND = {
 	base_image = "/home/mobasir-popos/Pictures/pure_black_wallpaper.jpg",
-	overlay_image = "/home/mobasir-popos/Pictures/wez_wallpaper/1.jpg",
-	dimmer = { brightness = 0.05 },
+	overlay_image = "/home/mobasir-popos/Pictures/wez_wallpaper/11.jpeg",
+	dimmer = { brightness = 0.02 },
 }
 
 -- Keybindings
@@ -114,7 +114,7 @@ config.background = {
 		repeat_x = "NoRepeat",
 		repeat_y = "NoRepeat",
 		height = "100%",
-		width = "50%",
+		width = "40%",
 		attachment = "Fixed",
 		vertical_align = "Middle",
 		horizontal_align = "Center",
