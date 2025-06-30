@@ -11,10 +11,10 @@
   "vim_mode": false,
   "use_autoclose": false,
   "relative_line_numbers": true,
-  "ui_font_size": 18,
-  "buffer_font_size": 16,
-  "ui_font_family": "FantasqueSansM Nerd Font",
-  "buffer_font_family": "Cousine Nerd Font",
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
+  "ui_font_family": "Lilex Nerd Font",
+  "buffer_font_family": "Lilex Nerd Font",
   "show_completions_on_input": true,
   "show_completion_documentation": true,
   "diagnostics": {
@@ -43,25 +43,6 @@
         "coloring": "fixed"
       }
     },
-    "Go": {
-      "show_completion_documentation": true,
-      "show_completions_on_input": true,
-      "language_servers": ["gopls"],
-      "indent_guides": {
-        "enabled": true,
-        "coloring": "indent_aware"
-      }
-    },
-    "TypeScript": {
-      "show_completion_documentation": true,
-      "show_completions_on_input": true,
-      "show_edit_predictions": true,
-      "language_servers": ["tsls"],
-      "indent_guides": {
-        "enabled": true,
-        "coloring": "fixed"
-      }
-    },
     "JavaScript": {
       "tab_size": 2,
       "show_completion_documentation": true,
@@ -76,7 +57,23 @@
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       },
-      "format_on_save": "on"
+      "format_on_save": "off"
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "show_completion_documentation": true,
+      "show_completions_on_input": true,
+      "show_edit_predictions": true,
+      "formatter": {
+        "external": {
+          "command": "biome",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "off"
     }
   },
   "tab_bar": {
@@ -90,7 +87,7 @@
     "dockerfile": true,
     "docker-compose": true
   },
-  "autosave": "on_focus_change",
+  "autosave": "on_window_change",
   "cursor_blink": true,
   "cursor_shape": "bar",
   "git": {
